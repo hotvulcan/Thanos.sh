@@ -10,7 +10,7 @@ Author: example mail@example.com
 …
 
 -->
-## Title: I erased a big bank's account data
+## I erased a big bank's account data
 
 Author: hotvulcan hotvulcan@gmail.com
 
@@ -21,3 +21,15 @@ It was the end of a month, I had to remove the test data so they can do the sett
 I was freezed about ten years, as I feel, and start to think. The information was available from other tables, but that day's journal data were lost. But the project is still in debug mode. so I have enough logs to re-calculate that data. I wrote a Perl script. the data got back. I didn't have to go to jail or run away...
 
 "Some hundreds of thousands CNY" could buy a big apartment in Beijing or 200~300 ounces gold in that year. 
+
+
+
+
+Fork and tell your story here, then PR. 
+EXAMPLE:
+
+## Title: 从删库到跑路
+
+Author: example mail@example.com
+
+…
