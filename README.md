@@ -20,7 +20,7 @@ feel free to post your story on ```Story.md```, waiting.
     #安装gshuf
     brew install coreutils
 ````
-> 2. 此脚本只会列出当前目录一半的文件。并且。。。总之小心点。。。  
+> 2. 此脚本只显示删除文件的数量。并且。。。总之小心点。。。  
 
 
 ## Invoke-Thanos.ps1
