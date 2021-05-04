@@ -14,13 +14,13 @@ Author: example mail@example.com
 
 Author: hotvulcan hotvulcan@gmail.com
 
-Many years ago, I got a project from a big unit( something like a company but belongs to the state of China ) in China. That includes an interface in a big bank's front machine. It was early years, IT security was not as serious as today. So they put me in a small chamber and gave me access to that front. The project was not officially online but had some transactions already. some hundreds of thousands CNY a day.
+Many years ago, I got a project from a big unit (something like a company, but belonging to the state of China) in China. That included an interface to a big bank's front machine. It was early years, and information security was not as serious as it is today. So they put me in a small chamber and gave me access to that front. The project was not officially online but had some transactions already — some hundreds of thousands CNY a day.
 
-It was the end of a month, I had to remove the test data so they can do the settle. the SQL was something like "delete from journals where done_by = 'example';".  I worked 36+ hours and got very tired, typoed it to "delete from journals ; where done_by 'example'". and the journals were gone. 
+It was the end of month, and I had to remove the test data so they could do the settlement. The SQL was something like `delete from journals where done_by = 'example';`.  I had worked 36+ hours, got very tired, and typoed it as `delete from journals ; where done_by 'example'`. And, the journals were gone. 
 
-I was freezed about ten years, as I feel, and start to think. The information was available from other tables, but that day's journal data were lost. But the project is still in debug mode. so I have enough logs to re-calculate that data. I wrote a Perl script. the data got back. I didn't have to go to jail or run away...
+I was frozen, as I perceived it, for about ten years. Eventually, I started to ponder. Most information was available from other tables, but that day's journal data were helplessly lost. However, the project was still in debug mode, so I still had enough logs to re-calculate that data. I wrote a Perl script and the data was restored. Fortunately, I didn't have to go to jail or run for my life...
 
-"Some hundreds of thousands CNY" could buy a big apartment in Beijing or 200~300 ounces gold in that year. 
+_P.S._ "Some hundreds of thousands CNY" could buy a big apartment in Beijing or 200~300 ounces of gold in that year. 
 
 
 
