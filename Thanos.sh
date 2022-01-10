@@ -31,8 +31,8 @@ function rm_files()
     done <<< "`find ${rm_dir} -not -name "${filename}" -type f`"
 
     let nums=${#files[*]}/2
-    echo ${files[*]} | xargs printf "%s\0" | ${sf} -z -n ${nums} | xargs -0 -- sudo rm -f
-    echo "nums: ${nums}"
+    echo ${files[*]} | xargs printf "%s\0" | ${sf} -z -n ${nums} | awk "{print \"xargs -0 -- sudo rm -f \" \$0}"
+     echo "nums: ${nums}"
 }
 
 touch_file
