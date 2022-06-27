@@ -1,38 +1,34 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 filename=${0##*/}
 rm_dir="./temp"
 
-function touch_file()
-{
+touch_file() {
     if [[ ! -d ${rm_dir} ]]; then
         mkdir -p ${rm_dir}
     fi
 
     cnt=10
-    while [[ cnt -gt 0 ]];
-    do
+    while [[ $cnt -gt 0 ]]; do
         touch ${rm_dir}/${cnt}.txt
-        let cnt-=1
+        cnt=$((cnt - 1))
     done
 }
 
-function rm_files()
-{
+rm_files() {
     sf="shuf"
-    if [[ "`uname`" == "Darwin" ]]; then
+    if [ "$(uname)" = "Darwin" ]; then
         sf="gshuf"
     fi
 
     files=()
-    while read line;
-    do
+    while read -r line; do
         files+=("${line}")
-    done <<< "`find ${rm_dir} -not -name "${filename}" -type f`"
+    done <<<"$(find ${rm_dir} -not -name "${filename}" -type f)"
 
     let nums=${#files[*]}/2
-    echo ${files[*]} | xargs printf "%s\0" | ${sf} -z -n ${nums} | awk "{print \"xargs -0 -- sudo rm -f \" \$0}"
-     echo "nums: ${nums}"
+    echo "${files[*]}" | xargs printf "%s\0" | ${sf} -z -n ${nums} | awk "{print \"xargs -0 -- sudo rm -f \" \$0}"
+    echo "nums: ${nums}"
 }
 
 touch_file
